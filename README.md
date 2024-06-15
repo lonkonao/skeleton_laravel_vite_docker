@@ -11,37 +11,30 @@ Este repositorio contiene una aplicación Laravel configurada para ejecutarse en
 
 ### Clonar el Repositorio
 
-````bash
-git clone https://github.com/tu-usuario/tu-repositorio.git
-cd tu-repositorio
+```bash
+git clone https://github.com/lonkonao/skeleton_laravel_vite_docker
+```
 
-cp .env.example .env
-
-### Construir e Iniciar los Contenedores
-
-```markdown
 ### Construir e Iniciar los Contenedores
 
 ```bash
 docker-compose up -d
+```
 
-### Instalar Dependencias e Iniciar Vite
-
-```markdown
 ### Instalar Dependencias e Iniciar el Servidor de Desarrollo de Vite
 
 1. Accede al contenedor `myapp`:
 
-    ```bash
-    docker-compose exec myapp bash
-    ```
+   ```bash
+   docker-compose exec myapp bash
+   ```
 
 2. Instala las dependencias e inicia el servidor de desarrollo de Vite:
 
-    ```bash
-    npm install
-    npm run dev
-    ```
+   ```bash
+   npm install
+   npm run dev
+   ```
 
 ### Acceder a la Aplicación
 
@@ -57,7 +50,7 @@ El archivo `docker-compose.yml` está configurado para establecer los siguientes
 - **mariadb:** Servidor de base de datos MariaDB
 - **myapp:** Servidor de la aplicación Laravel
 
-```yaml
+````yaml
 version: "3.8"
 
 services:
