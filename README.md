@@ -1,6 +1,8 @@
 # Aplicación Laravel con Docker y Vite
 
-Este repositorio contiene una aplicación Laravel configurada para ejecutarse en un entorno Docker con Vite como el agrupador de activos.
+Este repositorio contiene una aplicación Laravel configurada para ejecutarse en un entorno Docker con Vite como el agrupador de activos. Esto es con la finalidad de trabajar sin instalar nada más que Docker.
+
+Probado en una MacBook Air M1.
 
 ## Prerrequisitos
 
