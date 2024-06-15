@@ -50,7 +50,7 @@ El archivo `docker-compose.yml` está configurado para establecer los siguientes
 - **mariadb:** Servidor de base de datos MariaDB
 - **myapp:** Servidor de la aplicación Laravel
 
-````yaml
+```yaml
 version: "3.8"
 
 services:
@@ -85,46 +85,41 @@ services:
 
 volumes:
   mariadb_data:
+```
 
 ### Configuración de Vite
 
-```markdown
 ### Configuración de Vite
 
 El archivo `vite.config.js` está configurado para manejar los compilados de desarrollo y producción:
 
 ```javascript
-import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
+import { defineConfig } from "vite";
+import laravel from "laravel-vite-plugin";
 
 export default defineConfig({
-    plugins: [
-        laravel({
-            input: [
-                'resources/sass/app.scss',
-                'resources/js/app.js',
-            ],
-            refresh: true,
-        }),
-    ],
-    server: {
-        host: '0.0.0.0',
-        port: 5173,
+  plugins: [
+    laravel({
+      input: ["resources/sass/app.scss", "resources/js/app.js"],
+      refresh: true,
+    }),
+  ],
+  server: {
+    host: "0.0.0.0",
+    port: 5173,
+  },
+  build: {
+    manifest: true,
+    outDir: "public/build",
+    rollupOptions: {
+      input: {
+        app: "resources/js/app.js",
+      },
     },
-    build: {
-        manifest: true,
-        outDir: 'public/build',
-        rollupOptions: {
-            input: {
-                app: 'resources/js/app.js',
-            },
-        },
-    },
+  },
 });
+```
 
-### Integración de Laravel Blade
-
-```markdown
 ### Integración de Laravel Blade
 
 Asegúrate de que tu plantilla Blade utilice la directiva `@vite` para incluir los activos gestionados por Vite:
@@ -210,4 +205,4 @@ Asegúrate de que tu plantilla Blade utilice la directiva `@vite` para incluir l
     </div>
 </body>
 </html>
-````
+```
