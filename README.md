@@ -7,6 +7,11 @@ Probado en una MacBook Air M1.
 ## Prerrequisitos
 
 - Docker
+- VSCode
+- COFEE
+- Iterm2
+- Oh My Zsh
+- REDBULL
 
 ## Comenzando
 
